@@ -180,4 +180,25 @@ INSERT INTO comment
 );
 
 -- Popular tabela 'contact'.
+INSERT into contact
+(
+    ctt_name
+    ctt_email
+    ctt_subject
+    ctt_message
+) VALUES
+(
+    'Maria das dores',
+    'maria@gmail.com',
+    'nao gosto de figo' ,
+    'nao gosto de figo porque ele e salgado'
+)
 
+
+ctt_id INT PRIMARY KEY AUTO_INCREMENT,
+    ctt_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    ctt_name VARCHAR(255),
+    ctt_email VARCHAR(255),
+    ctt_subject VARCHAR(255),
+    ctt_message TEXT,
+    ctt_status ENUM('received', 'read', 'answered', 'deleted') DEFAULT 'received'
